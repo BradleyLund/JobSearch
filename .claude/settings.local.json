@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node --version:*)",
+      "Bash(where curl)",
+      "Bash(powershell -Command:*)",
+      "Bash(where:*)",
+      "Bash(npm --version:*)",
+      "Bash(node:*)",
+      "WebFetch(domain:www.linkedin.com)"
+    ]
+  }
+}
