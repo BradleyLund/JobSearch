@@ -24,7 +24,7 @@ echo '{"company":"Acme","jobRole":"Engineer"}' | node post-job.mjs
 
 ## Google Sheet Column Mapping (JSON keys)
 
-`company`, `companyWebsite`, `companyDescription`, `recruitmentAgency`, `location`, `hybrid`, `jobRole`, `jobPosting`, `networkConnection`, `cvUsed`, `qualificationsMissing`, `dateFound`, `applicationSent`, `dateApplied`, `response` — followed by 8 blank interview columns.
+`company`, `companyWebsite`, `companyDescription`, `recruitmentAgency`, `location`, `hybrid`, `jobRole`, `jobPosting`, `salary`, `networkConnection`, `cvUsed`, `qualificationsMissing`, `dateFound`, `applicationSent`, `dateApplied`, `response` — followed by 8 blank interview columns.
 
 - `companyDescription`: Brief summary of what the company does
 - `recruitmentAgency`: "Yes" if the posting company is a middleman/recruiter (e.g., Robert Half, Perfict), "No" if it's the actual employer

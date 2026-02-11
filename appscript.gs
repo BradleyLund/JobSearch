@@ -12,6 +12,7 @@ function doPost(e) {
       data.hybrid || "",
       data.jobRole || "",
       data.jobPosting || "",
+      data.salary || "",
       data.networkConnection || "",
       data.cvUsed || "",
       data.qualificationsMissing || "",
@@ -24,6 +25,15 @@ function doPost(e) {
     ];
 
     sheet.appendRow(row);
+
+    // Force salary column to plain text so "$75,000" doesn't get mangled
+    if (data.salary) {
+      var lastRow = sheet.getLastRow();
+      var salaryCol = 9; // Column I = salary
+      var cell = sheet.getRange(lastRow, salaryCol);
+      cell.setNumberFormat("@");
+      cell.setValue(data.salary);
+    }
 
     return ContentService
       .createTextOutput(JSON.stringify({ status: "ok", row: sheet.getLastRow() }))
